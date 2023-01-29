@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Age Calculator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        input[type='date'] {
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        #days,
+        #seconds,
+        #minutes,
+        #hours,
+        #months,
+        #years,
+        #head,
+        #heartbeats,
+        #breath,
+        #asa {
+            margin-top: 5px;
+            padding: 1px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 42px;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        label {
+            color: #555;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .calc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 60px;
+            border: 2px solid black;
+            border-radius: 20px;
+            background: #1bffea45;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            label {
+                font-size: 18px;
+            }
+
+            input[type='date'] {
+                width: 90%;
+            }
+
+            button {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            label {
+                font-size: 16px;
+            }
+
+            input[type='date'] {
+                width: 80%;
+            }
+
+            button {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calc">
+            <h1>Age Calculator</h1>
+            <h2 id="asa">calculate your exact age here</h2>
+            <label for="date">Enter Your date of birth</label>
+            <input type="date" id="date" name="date">
+            <button onclick="calculate()">Calculate</button>
+            <br>
+            <br>
+            <div id="ages">
+                <p id="head" style="font-size:25px;"></p>
+                <p id="years" style="font-size:20px;"></p>
+                <p id="months" style="font-size:20px;"></p>
+                <p id="days" style="font-size:20px;"></p>
+                <p id="hours" style="font-size:20px;"></p>
+                <p id="minutes" style="font-size:20px;"></p>
+                <p id="seconds" style="font-size:20px;"></p>
+                <p id="heartbeats" style="font-size:20px;"></p>
+                <p id="breath" style="font-size:20px;"></p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
